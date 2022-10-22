@@ -1,0 +1,96 @@
+
+
+
+server: 
+  name : "devopstelugu"
+  capacity : 50GB
+  
+socialMedia :
+  - TejaChittamuri
+  - ChittamuriGithub
+  - Deopstelugu
+
+# MultiLine Comments
+message : |
+  Hi bab
+  How are you
+  Mi tik huu
+#Combining mutliple lines string to Single line string
+messgae : >
+  Hi re
+  Hello 
+  Bro sskojdj
+
+
+  list of servers : [ server1 : {name : demovm01, SkuSize : 32gb} ]
+
+---
+  list of servers :
+   - server 1 :
+      name : database
+      application : banking
+   - server 2 :
+      name  : webapp    
+      application : fashionhub
+---
+
+servers :
+  web :
+    applicationserver : run nodejs
+  db :
+    database server : run mysql
+  orchestation :
+    application maintanence : kuberneetes
+
+  ---
+
+# YAML config docker-compose file using latest version 3
+
+
+version: "3"
+
+services :
+  redis :
+     image : redis
+  db :
+     image : postgres:9.4
+     environment :
+       POSTGRES_USER : teja
+      POSTGRES_PASSWORD : 1234
+  vote: 
+     image : vote-app
+     ports :
+     - 5000:80
+  worker  :
+     image : worker-app
+  result :
+     image : result-app
+     ports :
+       - 5001:80
+
+---
+
+redis :
+  image : redis
+database :
+  image : postgres:9.4
+voteapp : 
+  image : voter-app
+  links : 
+   - redis:redis
+   - db:db
+  ports :
+   - 5000:80 
+worker  :
+     image : worker-app
+     links : 
+       - redis:redis
+       - db:db
+     ports :
+       - 5000:80
+result :
+  image : result-app
+  links:
+   - db:db
+  ports :
+   - 5001:80

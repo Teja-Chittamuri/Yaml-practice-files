@@ -1,0 +1,28 @@
+"Teja Rollnumber" : 21
+"apple" : "Red"
+---
+# lists
+- apple
+- mango
+- banana
+- Apple  
+---
+cities:
+ - Nellore
+ - Ananthapuram
+ - Guntur
+---
+cities : [Hyderabad, Chennai, Banglore]
+---
+{name:"Teja Chittamuri"
+
+message : |
+  Hey bab. I was hungry can you make dinne for me?
+  yes bab.I was doing it
+
+  
+mes : >
+ hi 
+ hello
+ hey 
+ good morning 

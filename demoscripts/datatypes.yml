@@ -1,0 +1,46 @@
+# String Variables Representation
+
+name : Teja
+surName : "Chittamuri"
+job : 'DE'
+
+# Writing messages in Mutliple lines
+
+bio : !!str |
+Hey my names is Teja chittamuri.
+I am very nice dude.
+
+# writing a single message in multiple lines
+# Same as  Hi bro How are you?What is going on?what is your weekend plan
+message: >
+  Hi bro
+  How are you?
+  What is going on?
+  what is your weekend plan
+
+
+# Datatypes
+
+number : 1232
+marks : 95.3
+booleanValue : N,No,False
+# same for True ->  Y,Yes
+
+# Specify the Type
+
+zero : !!int 0
+postiveNumber : !!int 21
+neagtiveNUmber : !!int -21
+commonValue : !!int +540_000
+percentage : !!float 93.2
+notaNumber : .nan
+
+# Null Type
+
+surname : !!null Null NULL ~
+~ : This is a Null Key
+
+# DateType
+
+date : 2022-10-14
+date : !!timestamp 2022-10-14T03:21:21

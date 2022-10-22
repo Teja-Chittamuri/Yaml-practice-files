@@ -1,0 +1,16 @@
+{
+    "school": [
+      {
+        "name": "sbh school"
+      },
+      {
+        "principal": "saraswathi"
+      },
+      {
+        "studentDetails": {
+          "roll": 21,
+          "name": "tej"
+        }
+      }
+    ]
+  }
